@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+body {
+  @apply bg-gradient-to-br from-pink-200 to-purple-300 min-h-screen;
+}
