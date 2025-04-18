@@ -10,6 +10,10 @@ function App() {
   const [isMuted, setIsMuted] = useState(false);
   const audio = new Audio(song);
 
+  // Activate audio alerts
+  // when the user clicks the button
+  // to mute/unmute the song
+
   useEffect(() => {
     audio.loop = true;
     audio.volume = 0.3;
@@ -34,7 +38,7 @@ function App() {
         className="absolute top-4 right-4 bg-purple-200 px-3 py-1 rounded-lg shadow-md text-purple-700"
         onClick={() => setIsMuted(!isMuted)}
       >
-        {isMuted ? "🔇" : "🔊"}
+        Activa el audio ➡️{isMuted ? "🔇" : "🔊"}
       </button>
 
       {stage === "candles" && <CandleScene next={nextStage} />}
